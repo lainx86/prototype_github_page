@@ -24,7 +24,7 @@ module.exports = function(eleventyConfig) {
 
   // Notes collection
   eleventyConfig.addCollection("notes", function(collectionApi) {
-    return collectionApi.getFilteredByGlob("src/notes/*.md").sort((a,b) => {
+    return collectionApi.getFilteredByGlob("src/notes/**/*.md").sort((a,b) => {
       const da = a.data.date ? new Date(a.data.date) : new Date(0);
       const db = b.data.date ? new Date(b.data.date) : new Date(0);
       return db - da;
