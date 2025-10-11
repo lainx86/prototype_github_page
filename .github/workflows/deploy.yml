@@ -1,5 +1,9 @@
 name: Deploy Eleventy to GitHub Pages Repo
 
+permissions:
+  contents: write
+
+
 on:
   push:
     branches:
