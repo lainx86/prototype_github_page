@@ -1,0 +1,16 @@
+{
+  "name": "feby-garden",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "eleventy --serve --watch",
+    "build": "eleventy",
+    "clean": "rm -rf _site"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.2"
+  },
+  "dependencies": {
+    "lodash": "^4.17.21",
+    "luxon": "^3.7.2"
+  }
+}

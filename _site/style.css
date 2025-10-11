@@ -1,0 +1,41 @@
+/* Animations & custom styles */
+.fade-in {
+  animation: fadeIn 1.5s ease-in-out forwards;
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.link-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.link-card:hover {
+  transform: translateY(-4px);
+}
+
+/* Dark mode styling */
+body.dark {
+  background-color: #0f172a; /* slate-900 */
+  color: #e2e8f0;
+}
+
+body.dark a,
+body.dark h1,
+body.dark h2,
+body.dark h3 {
+  color: #a7f3d0; /* emerald-200 */
+}
+
+body.dark .link-card {
+  background-color: #1e293b;
+  border-color: #334155;
+}
+
+body.dark footer {
+  color: #94a3b8;
+}

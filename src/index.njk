@@ -1,0 +1,52 @@
+---
+layout: layouts/base.njk
+title: Home
+---
+
+<section class="max-w-3xl mx-auto text-center mb-16">
+  <p class="text-lg text-gray-700">
+    Welcome, wanderer. Here you'll find notes, experiments, and unfinished ideas—because not everything needs to be polished to matter.
+  </p>
+</section>
+
+<div class="max-w-3xl mx-auto px-6 md:px-10 mb-10 fade-in">
+  <div class="flex gap-3 items-center justify-center">
+    <input id="searchInput" type="search" placeholder="Search notes..." class="w-full md:w-2/3 rounded-full px-4 py-2 border border-gray-300 focus:outline-none shadow-sm" />
+    <a href="/notes/" class="px-4 py-2 rounded-full bg-emerald-200 hover:bg-emerald-300 text-emerald-900">All notes</a>
+  </div>
+</div>
+
+<section class="max-w-5xl mx-auto">
+  <h2 class="text-2xl font-semibold text-emerald-900 mb-6">🌱 Recently Growing Notes</h2>
+  <div id="notesPreview" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    {% for note in collections.notes | slice(0,6) %}
+      <article class="link-card block p-6 rounded-2xl bg-white shadow-sm hover:shadow-md border border-emerald-100 transition" data-title="{{ note.data.title | lower }}" data-tags="{{ note.data.tags | join(',') }}">
+        <a href="{{ note.url }}">
+          <h3 class="font-semibold text-lg mb-2 text-emerald-800">{{ note.data.title }}</h3>
+          <p class="text-sm text-gray-600">{{ note.data.excerpt }}</p>
+        </a>
+      </article>
+    {% else %}
+      <p class="text-gray-600">No notes yet. Tambahkan file markdown di <code>src/notes/</code>.</p>
+    {% endfor %}
+  </div>
+</section>
+
+<!-- Projects left intact as in original -->
+<section id="projects" class="max-w-5xl mx-auto mt-20">
+  <h2 class="text-2xl font-semibold text-emerald-900 mb-6">🧠 Projects in Bloom</h2>
+  <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div class="bg-emerald-100 p-6 rounded-2xl hover:shadow-md transition">
+      <h3 class="font-semibold text-lg mb-2 text-emerald-800">Tidesh</h3>
+      <p class="text-sm text-gray-700">A personal shell project inspired by Unix philosophy and simplicity.</p>
+    </div>
+    <div class="bg-emerald-100 p-6 rounded-2xl hover:shadow-md transition">
+      <h3 class="font-semibold text-lg mb-2 text-emerald-800">Digital Garden</h3>
+      <p class="text-sm text-gray-700">This very site—grown with curiosity and Tailwind CSS.</p>
+    </div>
+    <div class="bg-emerald-100 p-6 rounded-2xl hover:shadow-md transition">
+      <h3 class="font-semibold text-lg mb-2 text-emerald-800">Matrix Portfolio</h3>
+      <p class="text-sm text-gray-700">A hacker-themed interactive portfolio featuring ASCII animations.</p>
+    </div>
+  </div>
+</section>
