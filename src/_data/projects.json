@@ -1,0 +1,17 @@
+[
+  {
+    "name": "Tidesh",
+    "description": "A personal shell project inspired by Unix philosophy and simplicity.",
+    "url": "https://github.com/itsFeby/tidesh"
+  },
+  {
+    "name": "Digital Garden",
+    "description": "This very site—grown with curiosity and Tailwind CSS.",
+    "url": "https://itsFeby.github.io/"
+  },
+  {
+    "name": "CLI Audio Player",
+    "description": "Play audio from your terminal.",
+    "url": "https://github.com/itsFeby/cli-audio-player"
+  }
+]
