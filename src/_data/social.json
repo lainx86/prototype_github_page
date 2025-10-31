@@ -1,0 +1,22 @@
+[
+  {
+    "name": "GitHub",
+    "icon": "github",
+    "url": "https://github.com/lainx86"
+  },
+  {
+    "name": "LinkedIn",
+    "icon": "linkedin",
+    "url": "https://linkedin.com/in/febysyarief"
+  },
+  {
+    "name": "Email",
+    "icon": "mail",
+    "url": "mailto:febysyarief.ocean@gmail.com"
+  },
+  {
+    "name": "Instagram",
+    "icon": "instagram",
+    "url": "https://instagram.com/yourusername"
+  }
+]

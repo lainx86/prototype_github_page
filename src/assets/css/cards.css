@@ -1,0 +1,260 @@
+/* Cards Styling - Fix Background Issues */
+
+/* Project Cards */
+.project-card {
+    background: rgba(30, 30, 35, 0.6) !important;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.project-card:hover {
+    background: rgba(40, 40, 45, 0.7) !important;
+    border-color: rgba(168, 85, 247, 0.4);
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(168, 85, 247, 0.2);
+}
+
+/* Experience Cards */
+.experience-card {
+    background: rgba(30, 30, 35, 0.6) !important;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 1rem;
+    padding: 2rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.experience-card:hover {
+    background: rgba(40, 40, 45, 0.7) !important;
+    border-color: rgba(168, 85, 247, 0.4);
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px rgba(168, 85, 247, 0.15);
+}
+
+/* General Glass Cards */
+.bg-white\/5,
+.bg-black\/50 {
+    background: rgba(30, 30, 35, 0.6) !important;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+/* Section backgrounds */
+section.bg-white\/5 {
+    background: rgba(15, 15, 20, 0.3) !important;
+}
+
+/* Contact form inputs */
+input[type="text"],
+input[type="email"],
+textarea {
+    background: rgba(30, 30, 35, 0.8) !important;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: white;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    background: rgba(40, 40, 45, 0.9) !important;
+    border-color: rgba(168, 85, 247, 0.5);
+    outline: none;
+}
+
+/* Contact info cards */
+.contact-card {
+    background: rgba(30, 30, 35, 0.6) !important;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.contact-card:hover {
+    background: rgba(40, 40, 45, 0.7) !important;
+    border-color: rgba(168, 85, 247, 0.3);
+    transform: translateY(-2px);
+}
+
+/* About page cards */
+.about-card {
+    background: rgba(30, 30, 35, 0.6) !important;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 1.5rem;
+    padding: 2rem;
+}
+
+.about-card:hover {
+    background: rgba(40, 40, 45, 0.7) !important;
+    border-color: rgba(168, 85, 247, 0.3);
+}
+
+/* Override conflicting styles */
+.rounded-2xl,
+.rounded-3xl {
+    background-color: rgba(30, 30, 35, 0.6) !important;
+}
+
+/* Tech badges */
+.px-3.py-1 {
+    backdrop-filter: blur(5px);
+}
+
+/* Ensure proper contrast */
+.text-gray-300,
+.text-gray-400 {
+    color: rgba(209, 213, 219, 0.9);
+}
+
+/* Grid layouts */
+.grid > div {
+    background: rgba(30, 30, 35, 0.6) !important;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .project-card,
+    .experience-card,
+    .contact-card,
+    .about-card {
+        padding: 1.25rem;
+    }
+}
+
+/* Remove underline from all links and buttons */
+a {
+    text-decoration: none !important;
+}
+
+button {
+    text-decoration: none !important;
+}
+
+/* Ensure buttons and links have no underline */
+.inline-block,
+.inline-flex {
+    text-decoration: none !important;
+}
+
+/* Override any default link styles */
+a:hover,
+a:focus,
+a:active {
+    text-decoration: none !important;
+}
+
+/* Nested Cards - For grid items inside parent cards */
+.about-card .grid > div,
+.experience-card .grid > div,
+.contact-card.grid > div {
+    background: rgba(15, 15, 20, 0.5) !important;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 0.75rem;
+    padding: 1rem;
+    transition: all 0.3s ease;
+}
+
+.about-card .grid > div:hover,
+.experience-card .grid > div:hover {
+    background: rgba(25, 25, 30, 0.6) !important;
+    border-color: rgba(168, 85, 247, 0.2);
+}
+
+/* Category buttons */
+.about-card button {
+    background: rgba(30, 30, 35, 0.6) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.about-card button:hover {
+    background: rgba(168, 85, 247, 0.2) !important;
+    border-color: rgba(168, 85, 247, 0.3);
+}
+
+/* Specific fix for nested divs in grids */
+.grid.md\:grid-cols-2 > div,
+.grid.md\:grid-cols-3 > div {
+    background: rgba(15, 15, 20, 0.5) !important;
+    backdrop-filter: blur(5px);
+}
+
+/* Category buttons styling */
+.category-btn {
+    background: rgba(30, 30, 35, 0.6) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+}
+
+.category-btn:hover {
+    background: rgba(168, 85, 247, 0.2) !important;
+    border-color: rgba(168, 85, 247, 0.3);
+    transform: scale(1.05);
+}
+
+/* Override grid item backgrounds in parent cards */
+.about-card > .grid > div,
+.about-card .grid.md\:grid-cols-2 > div,
+.about-card .grid.md\:grid-cols-3 > div {
+    background: rgba(15, 15, 20, 0.5) !important;
+}
+
+/* Fix for p-4 class in nested elements */
+.p-4.bg-black\/30 {
+    background: rgba(15, 15, 20, 0.5) !important;
+}
+
+/* Spacing between cards */
+.space-y-8 > * + * {
+    margin-top: 2rem;
+}
+
+.space-y-6 > * + * {
+    margin-top: 1.5rem;
+}
+
+.space-y-4 > * + * {
+    margin-top: 1rem;
+}
+
+/* Margin bottom for sections */
+section.about-card,
+section.project-card,
+section.experience-card,
+section.contact-card {
+    margin-bottom: 2rem;
+}
+
+/* Grid gap adjustments */
+.grid {
+    gap: 1.5rem;
+}
+
+.grid.gap-6 {
+    gap: 1.5rem;
+}
+
+.grid.gap-8 {
+    gap: 2rem;
+}
+
+/* Specific spacing for page layouts */
+.max-w-3xl > *,
+.max-w-4xl > *,
+.max-w-6xl > * {
+    margin-bottom: 2rem;
+}
+
+.max-w-3xl > *:last-child,
+.max-w-4xl > *:last-child,
+.max-w-6xl > *:last-child {
+    margin-bottom: 0;
+}

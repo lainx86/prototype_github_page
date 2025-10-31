@@ -1,16 +1,20 @@
 {
-  "name": "feby-garden",
+  "name": "portfolio-11ty",
   "version": "1.0.0",
+  "description": "Modern 3D Portfolio built with Eleventy",
   "scripts": {
-    "dev": "eleventy --serve --watch",
+    "start": "eleventy --serve",
     "build": "eleventy",
     "clean": "rm -rf _site"
   },
+  "keywords": [
+    "eleventy",
+    "portfolio",
+    "11ty"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
   "devDependencies": {
-    "@11ty/eleventy": "^3.1.2"
-  },
-  "dependencies": {
-    "lodash": "^4.17.21",
-    "luxon": "^3.7.2"
+    "@11ty/eleventy": "^2.0.1"
   }
 }

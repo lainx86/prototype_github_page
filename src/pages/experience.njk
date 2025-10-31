@@ -1,0 +1,79 @@
+---
+layout: layouts/page.njk
+title: My Experience
+description: Professional journey and achievements
+permalink: /experience/
+---
+
+<div class="space-y-8">
+  <!-- Timeline -->
+  <div class="space-y-6">
+    {% for exp in experience %}
+    <div class="experience-card">
+      <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-4 gap-2">
+        <div>
+          <h3 class="text-2xl font-bold text-purple-400">{{ exp.role }}</h3>
+          <p class="text-xl text-gray-300">{{ exp.company }}</p>
+        </div>
+        <span class="text-gray-500 text-sm md:text-base">{{ exp.period }}</span>
+      </div>
+      <p class="text-gray-400 mb-4">{{ exp.description }}</p>
+      {% if exp.type %}
+      <div class="mt-4">
+        <span class="px-3 py-1 bg-blue-500/20 rounded-full text-xs text-blue-300">
+          {{ exp.type }}
+        </span>
+      </div>
+      {% endif %}
+    </div>
+    {% endfor %}
+  </div>
+
+<!-- Skills Summary -->
+<section class="experience-card">
+  <h2 class="text-3xl font-bold mb-6 text-purple-400">Key Skills</h2>
+  <div class="grid md:grid-cols-3 gap-6">
+    <div>
+      <h3 class="text-lg font-semibold mb-3 text-gray-200">Technical</h3>
+      <ul class="space-y-2 text-gray-400 text-sm">
+        <li>• Machine Learning</li>
+        <li>• IoT Systems</li>
+        <li>• Data Analysis</li>
+      </ul>
+    </div>
+    <div>
+      <h3 class="text-lg font-semibold mb-3 text-gray-200">Soft Skills</h3>
+      <ul class="space-y-2 text-gray-400 text-sm">
+        <li>• Problem Solving</li>
+        <li>• Team Collaboration</li>
+        <li>• Communication</li>
+      </ul>
+    </div>
+    <div>
+      <h3 class="text-lg font-semibold mb-3 text-gray-200">Languages</h3>
+      <ul class="space-y-2 text-gray-400 text-sm">
+        <li>• English (Fluent)</li>
+        <li>• Indonesian (Native)</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Download Resume -->
+  <div class="text-center">
+    <a href="/assets/resume.pdf"
+       target="_blank"
+       class="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full font-semibold hover:shadow-lg hover:shadow-purple-500/50 transition-all hover:scale-105">
+      <i data-lucide="download" class="w-5 h-5"></i>
+      Download Full Resume
+    </a>
+  </div>
+
+  <!-- Back to Home -->
+  <div class="text-center mt-8">
+    <a href="/" class="inline-block px-8 py-3 bg-white/10 hover:bg-white/20 rounded-full font-semibold transition-all hover:scale-105">
+      Back to Home
+    </a>
+  </div>
+</div>

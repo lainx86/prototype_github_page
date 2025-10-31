@@ -1,0 +1,30 @@
+---
+layout: layouts/base.njk
+---
+
+{% include "partials/header.njk" %}
+
+<main class="pt-32 pb-16">
+  <article class="max-w-4xl mx-auto px-6">
+    <!-- Page Title -->
+    {% if title %}
+    <h1 class="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+      {{ title }}
+    </h1>
+    {% endif %}
+    
+    <!-- Page Description -->
+    {% if description %}
+    <p class="text-xl text-gray-400 mb-12">
+      {{ description }}
+    </p>
+    {% endif %}
+    
+    <!-- Page Content -->
+    <div class="prose prose-invert max-w-none">
+      {{ content | safe }}
+    </div>
+  </article>
+</main>
+
+{% include "partials/footer.njk" %}

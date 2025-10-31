@@ -1,0 +1,37 @@
+<section id="home" class="relative min-h-screen flex items-center justify-center">
+  <div class="text-center z-10 px-6 hero-content">
+    <div class="mb-6 inline-block">
+      <div class="w-32 h-32 rounded-full bg-gradient-to-br from-purple-500 to-blue-500 mx-auto mb-6 profile-3d"></div>
+    </div>
+
+    <h1 class="text-5xl md:text-8xl font-bold mb-4">
+      Hi, I'm <span class="bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent">
+        {{ site.author.name }}
+      </span>
+    </h1>
+
+    <p class="text-xl md:text-2xl text-gray-400 mb-2">
+      {{ site.author.title }}
+    </p>
+
+    <p class="text-lg text-gray-500 max-w-2xl mx-auto mb-8">
+      {{ site.author.tagline }}<span class="animate-pulse">|</span>
+    </p>
+
+    <div class="flex gap-4 justify-center mb-12 social-links">
+      {% for item in social %}
+      <a href="{{ item.url }}"
+         target="_blank"
+         rel="noopener noreferrer"
+         class="p-3 bg-white/10 rounded-full hover:bg-white/20 transition-all hover:scale-110"
+         aria-label="{{ item.name }}">
+        <i data-lucide="{{ item.icon }}" class="w-6 h-6"></i>
+      </a>
+      {% endfor %}
+    </div>
+
+    <div class="scroll-indicator">
+      <i data-lucide="chevron-down" class="w-8 h-8 mx-auto animate-bounce text-purple-400"></i>
+    </div>
+  </div>
+</section>

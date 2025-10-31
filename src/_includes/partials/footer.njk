@@ -1,0 +1,20 @@
+<footer class="relative py-8 px-6 border-t border-white/10 mt-32">
+  <div class="max-w-6xl mx-auto">
+    <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+      <div class="text-gray-500 text-sm">
+        © 2025 {{ site.author.name }}. Built with Eleventy.
+      </div>
+      <div class="flex gap-4">
+        {% for item in social %}
+        <a href="{{ item.url }}" 
+           target="_blank" 
+           rel="noopener noreferrer"
+           class="text-gray-400 hover:text-purple-400 transition-colors"
+           aria-label="{{ item.name }}">
+          <i data-lucide="{{ item.icon }}" class="w-5 h-5"></i>
+        </a>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</footer>

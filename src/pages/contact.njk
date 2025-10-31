@@ -1,0 +1,132 @@
+---
+layout: layouts/page.njk
+title: Get In Touch
+description: Let's collaborate on something amazing
+permalink: /contact/
+---
+
+<div class="max-w-3xl mx-auto space-y-8">
+  <!-- Contact Info -->
+  <section class="about-card text-center">
+    <h2 class="text-3xl font-bold mb-6 text-purple-400">Let's Build Something Together</h2>
+    <p class="text-lg text-gray-300 mb-8">
+      I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
+    </p>
+
+    <!-- Contact Buttons -->
+    <div class="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+      <a href="mailto:{{ site.author.email }}"
+         class="px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full font-semibold hover:shadow-lg hover:shadow-purple-500/50 transition-all hover:scale-105 inline-flex items-center justify-center gap-2">
+        <i data-lucide="mail" class="w-5 h-5"></i>
+        Send Email
+      </a>
+
+      <a href="/assets/resume.pdf"
+         target="_blank"
+         class="px-8 py-4 bg-white/10 hover:bg-white/20 rounded-full font-semibold transition-all hover:scale-105 inline-flex items-center justify-center gap-2">
+        <i data-lucide="download" class="w-5 h-5"></i>
+        Download Resume
+      </a>
+    </div>
+
+    <!-- Social Links -->
+    <div class="flex gap-6 justify-center">
+      {% for item in social %}
+      <a href="{{ item.url }}"
+         target="_blank"
+         rel="noopener noreferrer"
+         class="p-3 bg-white/10 rounded-full hover:bg-white/20 transition-all hover:scale-110"
+         aria-label="{{ item.name }}">
+        <i data-lucide="{{ item.icon }}" class="w-6 h-6"></i>
+      </a>
+      {% endfor %}
+    </div>
+  </section>
+
+  <!-- Contact Details -->
+  <div class="grid md:grid-cols-2 gap-6">
+    <!-- Email -->
+    <div class="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-purple-500/50 transition-all">
+      <div class="flex items-center gap-4 mb-3">
+        <div class="p-3 bg-purple-500/20 rounded-full">
+          <i data-lucide="mail" class="w-6 h-6 text-purple-400"></i>
+        </div>
+        <div>
+          <h3 class="font-bold text-gray-200">Email</h3>
+          <p class="text-sm text-gray-400">Drop me a line</p>
+        </div>
+      </div>
+      <a href="mailto:{{ site.author.email }}" class="text-purple-400 hover:text-purple-300 transition-colors">
+        {{ site.author.email }}
+      </a>
+    </div>
+
+    <!-- Location -->
+    <div class="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-purple-500/50 transition-all">
+      <div class="flex items-center gap-4 mb-3">
+        <div class="p-3 bg-blue-500/20 rounded-full">
+          <i data-lucide="map-pin" class="w-6 h-6 text-blue-400"></i>
+        </div>
+        <div>
+          <h3 class="font-bold text-gray-200">Location</h3>
+          <p class="text-sm text-gray-400">Where I'm based</p>
+        </div>
+      </div>
+      <p class="text-gray-300">{{ site.author.location }}</p>
+    </div>
+  </div>
+
+  <!-- Contact Form (Optional) -->
+  <section class="bg-white/5 backdrop-blur-sm rounded-3xl p-8 border border-white/10">
+    <h2 class="text-2xl font-bold mb-6 text-purple-400">Send a Message</h2>
+    <form action="https://formspree.io/f/myzbnrwl" method="POST" class="space-y-4">
+      <div>
+        <label for="name" class="block text-sm font-semibold mb-2 text-gray-300">Name</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          required
+          class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg focus:outline-none focus:border-purple-500 text-white placeholder-gray-500"
+          placeholder="Your name">
+      </div>
+
+      <div>
+        <label for="email" class="block text-sm font-semibold mb-2 text-gray-300">Email</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          required
+          class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg focus:outline-none focus:border-purple-500 text-white placeholder-gray-500"
+          placeholder="your@email.com">
+      </div>
+
+      <div>
+        <label for="message" class="block text-sm font-semibold mb-2 text-gray-300">Message</label>
+        <textarea
+          id="message"
+          name="message"
+          rows="5"
+          required
+          class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg focus:outline-none focus:border-purple-500 text-white placeholder-gray-500"
+          placeholder="Your message..."></textarea>
+      </div>
+
+      <button
+        type="submit"
+        class="w-full px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full font-semibold hover:shadow-lg hover:shadow-purple-500/50 transition-all hover:scale-105">
+        Send Message
+      </button>
+    </form>
+    <p class="text-sm text-gray-500 mt-4 text-center">
+    </p>
+  </section>
+
+  <!-- Back to Home -->
+  <div class="text-center mt-12">
+    <a href="/" class="inline-block px-8 py-3 bg-white/10 hover:bg-white/20 rounded-full font-semibold transition-all hover:scale-105">
+      Back to Home
+    </a>
+  </div>
+</div>

@@ -1,17 +1,26 @@
 [
   {
-    "name": "Tidesh",
-    "description": "A personal shell project inspired by Unix philosophy and simplicity.",
-    "url": "https://github.com/itsFeby/tidesh"
+    "title": "cli-audio-player",
+    "description": "Pemutar audio minimalis via terminal, ditulis dengan C++.\nGak ada UI, gak ada warna, cuma suara.",
+    "tech": ["C++", "SFML"],
+    "link": "https://github.com/lainx86/cli-audio-player",
+    "image": "/assets/images/projects/project1.jpg",
+    "featured": true
   },
   {
-    "name": "Digital Garden",
-    "description": "This very site—grown with curiosity and Tailwind CSS.",
-    "url": "https://itsFeby.github.io/"
+    "title": "tidesh",
+    "description": "a minimal Unix shell written in C",
+    "tech": ["C"],
+    "link": "https://github.com/lainx86/tidesh",
+    "image": "/assets/images/projects/project2.jpg",
+    "featured": true
   },
   {
-    "name": "CLI Audio Player",
-    "description": "Play audio from your terminal.",
-    "url": "https://github.com/itsFeby/cli-audio-player"
+    "title": "mind-reader",
+    "description": "Project gak jelas wkwk",
+    "tech": ["C++"],
+    "link": "https://github.com/lainx86/mind-reader",
+    "image": "/assets/images/projects/project3.jpg",
+    "featured": true
   }
 ]

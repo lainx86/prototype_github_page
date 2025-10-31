@@ -1,0 +1,31 @@
+<nav class="fixed top-8 left-1/2 -translate-x-1/2 z-50 w-auto">
+  <div class="liquid-glass-nav px-8 py-4 flex items-center gap-8">
+    <!-- Desktop Navigation -->
+    <div class="hidden md:flex items-center gap-8">
+      {% for item in navigation %}
+      <a href="{{ item.url }}" class="nav-link text-sm font-medium text-gray-300 hover:text-white transition-all relative whitespace-nowrap">
+        {{ item.label }}
+      </a>
+      {% endfor %}
+    </div>
+    
+    <!-- Mobile Menu Button -->
+    <button class="md:hidden" id="mobile-menu-btn">
+      <i data-lucide="menu" class="w-6 h-6"></i>
+    </button>
+  </div>
+  
+  <!-- Mobile Menu Dropdown -->
+  <div class="md:hidden hidden mt-4" id="mobile-menu">
+    <div class="liquid-glass-nav px-6 py-4 space-y-3">
+      {% for item in navigation %}
+      <a href="{{ item.url }}" class="block text-sm font-medium text-gray-300 hover:text-white transition-colors">
+        {{ item.label }}
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</nav>
+
+<!-- Spacer untuk memberi jarak antara nav dan konten -->
+<div class="h-32"></div>

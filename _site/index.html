@@ -1,97 +1,424 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Home — Feby's Digital Garden</title>
-    <link rel="stylesheet" href="/style.css" />
-    <script src="https://cdn.tailwindcss.com"></script>
-  </head>
-  <body class="bg-emerald-50 text-gray-800 antialiased flex flex-col min-h-screen font-sans ">
-    <header class="py-8 px-6 md:px-10 text-center fade-in">
-      <h1 class="text-4xl font-semibold text-emerald-900 mb-2">🌿 Feby's Digital Garden</h1>
-      <p class="text-gray-600 max-w-xl mx-auto">
-        A quiet corner of the internet where thoughts, projects, and curiosity slowly grow.
-      </p>
-    </header>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <meta name="description" content="I&#39;m obsessed with building">
 
-    <nav class="text-center mb-6 space-x-6 fade-in">
-      <a href="/" class="text-gray-700 hover:text-emerald-700">Home</a>
-      <a href="/profile" class="text-gray-700 hover:text-emerald-700">Profile</a>
-      <a href="/notes/" class="text-gray-700 hover:text-emerald-700">Notes</a>
-      <a href="#projects" class="text-gray-700 hover:text-emerald-700">Projects</a>
-    </nav>
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://yourportfolio.com">
+  <meta property="og:title" content="Home">
+  <meta property="og:description" content="I&#39;m obsessed with building">
 
-    <main class="flex-grow px-6 md:px-10 fade-in">
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://yourportfolio.com">
+  <meta property="twitter:title" content="Home">
+  <meta property="twitter:description" content="I&#39;m obsessed with building">
+
+  <!-- Theme Color -->
+  <meta name="theme-color" content="#8b5cf6">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="/assets/css/styles.css">
+  <link rel="stylesheet" href="/assets/css/utilities.css">
+  <link rel="stylesheet" href="/assets/css/animations.css">
+  <link rel="stylesheet" href="/assets/css/liquid-glass.css">
+  <link rel="stylesheet" href="/assets/css/cards.css">
+
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body class="bg-black text-white min-h-screen overflow-x-hidden">
+  
+  <!-- Animated Background -->
+  <div class="fixed inset-0 opacity-30 pointer-events-none" id="animated-bg">
+    <div class="absolute inset-0 bg-gradient-to-br from-purple-900 via-black to-blue-900"></div>
+  </div>
+
+  <!-- Content -->
+  <div class="relative z-10">
+    
+<nav class="fixed top-8 left-1/2 -translate-x-1/2 z-50 w-auto">
+  <div class="liquid-glass-nav px-8 py-4 flex items-center gap-8">
+    <!-- Desktop Navigation -->
+    <div class="hidden md:flex items-center gap-8">
       
-<section class="max-w-3xl mx-auto text-center mb-16">
-  <p class="text-lg text-gray-700">
-    Welcome, wanderer. Here you'll find notes, experiments, and unfinished ideas—because not everything needs to be polished to matter.
-  </p>
+      <a href="/index" class="nav-link text-sm font-medium text-gray-300 hover:text-white transition-all relative whitespace-nowrap">
+        Home
+      </a>
+      
+      <a href="/about" class="nav-link text-sm font-medium text-gray-300 hover:text-white transition-all relative whitespace-nowrap">
+        About
+      </a>
+      
+      <a href="/projects" class="nav-link text-sm font-medium text-gray-300 hover:text-white transition-all relative whitespace-nowrap">
+        Projects
+      </a>
+      
+      <a href="/experience" class="nav-link text-sm font-medium text-gray-300 hover:text-white transition-all relative whitespace-nowrap">
+        Experience
+      </a>
+      
+      <a href="/contact" class="nav-link text-sm font-medium text-gray-300 hover:text-white transition-all relative whitespace-nowrap">
+        Contact
+      </a>
+      
+    </div>
+    
+    <!-- Mobile Menu Button -->
+    <button class="md:hidden" id="mobile-menu-btn">
+      <i data-lucide="menu" class="w-6 h-6"></i>
+    </button>
+  </div>
+  
+  <!-- Mobile Menu Dropdown -->
+  <div class="md:hidden hidden mt-4" id="mobile-menu">
+    <div class="liquid-glass-nav px-6 py-4 space-y-3">
+      
+      <a href="/index" class="block text-sm font-medium text-gray-300 hover:text-white transition-colors">
+        Home
+      </a>
+      
+      <a href="/about" class="block text-sm font-medium text-gray-300 hover:text-white transition-colors">
+        About
+      </a>
+      
+      <a href="/projects" class="block text-sm font-medium text-gray-300 hover:text-white transition-colors">
+        Projects
+      </a>
+      
+      <a href="/experience" class="block text-sm font-medium text-gray-300 hover:text-white transition-colors">
+        Experience
+      </a>
+      
+      <a href="/contact" class="block text-sm font-medium text-gray-300 hover:text-white transition-colors">
+        Contact
+      </a>
+      
+    </div>
+  </div>
+</nav>
+
+<!-- Spacer untuk memberi jarak antara nav dan konten -->
+<div class="h-32"></div>
+
+<main>
+  <section id="home" class="relative min-h-screen flex items-center justify-center">
+  <div class="text-center z-10 px-6 hero-content">
+    <div class="mb-6 inline-block">
+      <div class="w-32 h-32 rounded-full bg-gradient-to-br from-purple-500 to-blue-500 mx-auto mb-6 profile-3d"></div>
+    </div>
+
+    <h1 class="text-5xl md:text-8xl font-bold mb-4">
+      Hi, I'm <span class="bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent">
+        Feby Syarief
+      </span>
+    </h1>
+
+    <p class="text-xl md:text-2xl text-gray-400 mb-2">
+      Student | Engineer | Builder
+    </p>
+
+    <p class="text-lg text-gray-500 max-w-2xl mx-auto mb-8">
+      I&#39;m obsessed with building<span class="animate-pulse">|</span>
+    </p>
+
+    <div class="flex gap-4 justify-center mb-12 social-links">
+      
+      <a href="https://github.com/lainx86"
+         target="_blank"
+         rel="noopener noreferrer"
+         class="p-3 bg-white/10 rounded-full hover:bg-white/20 transition-all hover:scale-110"
+         aria-label="GitHub">
+        <i data-lucide="github" class="w-6 h-6"></i>
+      </a>
+      
+      <a href="https://linkedin.com/in/febysyarief"
+         target="_blank"
+         rel="noopener noreferrer"
+         class="p-3 bg-white/10 rounded-full hover:bg-white/20 transition-all hover:scale-110"
+         aria-label="LinkedIn">
+        <i data-lucide="linkedin" class="w-6 h-6"></i>
+      </a>
+      
+      <a href="mailto:febysyarief.ocean@gmail.com"
+         target="_blank"
+         rel="noopener noreferrer"
+         class="p-3 bg-white/10 rounded-full hover:bg-white/20 transition-all hover:scale-110"
+         aria-label="Email">
+        <i data-lucide="mail" class="w-6 h-6"></i>
+      </a>
+      
+      <a href="https://instagram.com/yourusername"
+         target="_blank"
+         rel="noopener noreferrer"
+         class="p-3 bg-white/10 rounded-full hover:bg-white/20 transition-all hover:scale-110"
+         aria-label="Instagram">
+        <i data-lucide="instagram" class="w-6 h-6"></i>
+      </a>
+      
+    </div>
+
+    <div class="scroll-indicator">
+      <i data-lucide="chevron-down" class="w-8 h-8 mx-auto animate-bounce text-purple-400"></i>
+    </div>
+  </div>
 </section>
 
-<div class="max-w-3xl mx-auto px-6 md:px-10 mb-10 fade-in">
-  <div class="flex gap-3 items-center justify-center">
-    <input id="searchInput" type="search" placeholder="Search notes..." class="w-full md:w-2/3 rounded-full px-4 py-2 border border-gray-300 focus:outline-none shadow-sm" />
-    <a href="/notes/" class="px-4 py-2 rounded-full bg-emerald-200 hover:bg-emerald-300 text-emerald-900">All notes</a>
-  </div>
-</div>
-
-<section class="max-w-5xl mx-auto">
-  <h2 class="text-2xl font-semibold text-emerald-900 mb-6">🌱 Recently Growing Notes</h2>
-  <div id="notesPreview" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-    
-      <p class="text-gray-600">No notes yet. Tambahkan file markdown di <code>src/notes/</code>.</p>
-    
-  </div>
-</section>
-
-<!-- Projects left intact as in original -->
-<section id="projects" class="max-w-5xl mx-auto mt-20">
-  <h2 class="text-2xl font-semibold text-emerald-900 mb-6">🧠 Projects in Bloom</h2>
-  <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-    
-      <a href="https://github.com/itsFeby/tidesh" target="_blank"
-   class="block bg-emerald-100 p-6 rounded-2xl hover:shadow-md transition hover:bg-emerald-200">
-  <h3 class="font-semibold text-lg mb-2 text-emerald-800">Tidesh</h3>
-  <p class="text-sm text-gray-700">A personal shell project inspired by Unix philosophy and simplicity.</p>
-</a>
-
-    
-      <a href="https://itsFeby.github.io/" target="_blank"
-   class="block bg-emerald-100 p-6 rounded-2xl hover:shadow-md transition hover:bg-emerald-200">
-  <h3 class="font-semibold text-lg mb-2 text-emerald-800">Digital Garden</h3>
-  <p class="text-sm text-gray-700">This very site—grown with curiosity and Tailwind CSS.</p>
-</a>
-
-    
-      <a href="https://github.com/itsFeby/cli-audio-player" target="_blank"
-   class="block bg-emerald-100 p-6 rounded-2xl hover:shadow-md transition hover:bg-emerald-200">
-  <h3 class="font-semibold text-lg mb-2 text-emerald-800">CLI Audio Player</h3>
-  <p class="text-sm text-gray-700">Play audio from your terminal.</p>
-</a>
-
-    
-  </div>
-
-  <div class="text-center mt-10">
-    <a href="/projects/" class="inline-block bg-emerald-800 text-white px-6 py-3 rounded-xl hover:bg-emerald-700 transition">
-      🌿 See All Projects
-    </a>
+  <section id="about" class="relative py-32 px-6">
+  <div class="max-w-4xl mx-auto fade-in-section">
+    <h2 class="text-4xl md:text-5xl font-bold mb-12 bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+      About Me
+    </h2>
+    <div class="about-card">
+      <p class="text-lg text-gray-300 leading-relaxed mb-6">
+        I'm a passionate student interested in Robotics, Machine Learning, Artificial Intelligence, 
+        Physics, and Mathematic. I love creating innovative solutions and sharing knowledge.
+      </p>
+      <p class="text-lg text-gray-300 leading-relaxed">
+        Currently studying at Diponegoro University, I'm always exploring new technologies 
+        and working on projects that make a difference.
+      </p>
+    </div>
   </div>
 </section>
-
-
-    </main>
-
-    <footer class="py-12 text-center text-gray-500 text-sm fade-in mt-20">
-      <p>© 2025 Feby’s Digital Garden — Tended with ☕ and TailwindCSS</p>
-      <div class="mt-4 flex items-center justify-center gap-3">
-        <button id="themeToggle" class="px-3 py-1 border border-gray-400 rounded-full text-gray-700 hover:bg-gray-200 transition">Toggle Theme</button>
-        <a href="/notes/" class="text-sm text-emerald-700 hover:underline">View all notes</a>
+  <section id="projects" class="relative py-32 px-6 bg-white/5">
+  <div class="max-w-6xl mx-auto fade-in-section">
+    <h2 class="text-4xl md:text-5xl font-bold mb-12 bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+      Featured Projects
+    </h2>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      
+      
+      <div class="project-card">
+        <h3 class="text-2xl font-bold mb-3 text-purple-400">
+          cli-audio-player
+        </h3>
+        <p class="text-gray-400 mb-4">
+          Pemutar audio minimalis via terminal, ditulis dengan C++.
+Gak ada UI, gak ada warna, cuma suara.
+        </p>
+        <div class="flex flex-wrap gap-2 mb-4">
+          
+          <span class="px-3 py-1 bg-purple-500/20 rounded-full text-xs text-purple-300">
+            C++
+          </span>
+          
+          <span class="px-3 py-1 bg-purple-500/20 rounded-full text-xs text-purple-300">
+            SFML
+          </span>
+          
+        </div>
+        <a href="https://github.com/lainx86/cli-audio-player" class="inline-flex items-center gap-2 text-purple-400 hover:text-purple-300 transition-colors">
+          View Project 
+          <i data-lucide="external-link" class="w-4 h-4"></i>
+        </a>
       </div>
-    </footer>
+      
+      
+      
+      <div class="project-card">
+        <h3 class="text-2xl font-bold mb-3 text-purple-400">
+          tidesh
+        </h3>
+        <p class="text-gray-400 mb-4">
+          a minimal Unix shell written in C
+        </p>
+        <div class="flex flex-wrap gap-2 mb-4">
+          
+          <span class="px-3 py-1 bg-purple-500/20 rounded-full text-xs text-purple-300">
+            C
+          </span>
+          
+        </div>
+        <a href="https://github.com/lainx86/tidesh" class="inline-flex items-center gap-2 text-purple-400 hover:text-purple-300 transition-colors">
+          View Project 
+          <i data-lucide="external-link" class="w-4 h-4"></i>
+        </a>
+      </div>
+      
+      
+      
+      <div class="project-card">
+        <h3 class="text-2xl font-bold mb-3 text-purple-400">
+          mind-reader
+        </h3>
+        <p class="text-gray-400 mb-4">
+          Project gak jelas wkwk
+        </p>
+        <div class="flex flex-wrap gap-2 mb-4">
+          
+          <span class="px-3 py-1 bg-purple-500/20 rounded-full text-xs text-purple-300">
+            C++
+          </span>
+          
+        </div>
+        <a href="https://github.com/lainx86/mind-reader" class="inline-flex items-center gap-2 text-purple-400 hover:text-purple-300 transition-colors">
+          View Project 
+          <i data-lucide="external-link" class="w-4 h-4"></i>
+        </a>
+      </div>
+      
+      
+    </div>
+    
+    <div class="text-center mt-12">
+      <a href="#" class="inline-block px-8 py-3 bg-white/10 hover:bg-white/20 rounded-full transition-all hover:scale-105">
+        View All Projects
+      </a>
+    </div>
+  </div>
+</section>
+  <section id="experience" class="relative py-32 px-6">
+  <div class="max-w-4xl mx-auto fade-in-section">
+    <h2 class="text-4xl md:text-5xl font-bold mb-12 bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+      Experience
+    </h2>
+    <div class="space-y-6">
+      
+      <div class="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-purple-500/50 transition-all experience-card">
+        <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-4 gap-2">
+          <div>
+            <h3 class="text-2xl font-bold text-purple-400">Student</h3>
+            <p class="text-xl text-gray-300">Diponegoro University</p>
+          </div>
+          <span class="text-gray-500 text-sm md:text-base">2024 - present</span>
+        </div>
+        <p class="text-gray-400">Studying Oceanography</p>
+        
+        <div class="mt-4">
+          <span class="px-3 py-1 bg-blue-500/20 rounded-full text-xs text-blue-300">
+            college
+          </span>
+        </div>
+        
+      </div>
+      
+    </div>
+  </div>
+</section>
+  <section id="contact" class="relative py-32 px-6 bg-gradient-to-b from-black to-purple-900/20">
+  <div class="max-w-4xl mx-auto text-center fade-in-section">
+    <h2 class="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+      Let's Build Something
+    </h2>
+    <p class="text-xl text-gray-400 mb-12">
+      Got an exciting project? Let's talk!
+    </p>
 
-    <script src="/script.js"></script>
-  </body>
+    <div class="flex flex-col sm:flex-row gap-6 justify-center">
+      <a href="mailto:febysyarief.ocean@gmail.com"
+         class="px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full font-semibold hover:shadow-lg hover:shadow-purple-500/50 transition-all hover:scale-105 inline-flex items-center justify-center gap-2">
+        <i data-lucide="mail" class="w-5 h-5"></i>
+        Get In Touch
+      </a>
+
+      <a href="/assets/resume.pdf"
+         target="_blank"
+         class="px-8 py-4 bg-white/10 hover:bg-white/20 rounded-full font-semibold transition-all hover:scale-105 inline-flex items-center justify-center gap-2">
+        <i data-lucide="download" class="w-5 h-5"></i>
+        Download Resume
+      </a>
+    </div>
+
+    <div class="flex gap-6 justify-center mt-12">
+      
+      <a href="https://github.com/lainx86"
+         target="_blank"
+         rel="noopener noreferrer"
+         class="text-gray-400 hover:text-purple-400 transition-all hover:scale-110"
+         aria-label="GitHub">
+        <i data-lucide="github" class="w-6 h-6"></i>
+      </a>
+      
+      <a href="https://linkedin.com/in/febysyarief"
+         target="_blank"
+         rel="noopener noreferrer"
+         class="text-gray-400 hover:text-purple-400 transition-all hover:scale-110"
+         aria-label="LinkedIn">
+        <i data-lucide="linkedin" class="w-6 h-6"></i>
+      </a>
+      
+      <a href="mailto:febysyarief.ocean@gmail.com"
+         target="_blank"
+         rel="noopener noreferrer"
+         class="text-gray-400 hover:text-purple-400 transition-all hover:scale-110"
+         aria-label="Email">
+        <i data-lucide="mail" class="w-6 h-6"></i>
+      </a>
+      
+      <a href="https://instagram.com/yourusername"
+         target="_blank"
+         rel="noopener noreferrer"
+         class="text-gray-400 hover:text-purple-400 transition-all hover:scale-110"
+         aria-label="Instagram">
+        <i data-lucide="instagram" class="w-6 h-6"></i>
+      </a>
+      
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="relative py-8 px-6 border-t border-white/10 mt-32">
+  <div class="max-w-6xl mx-auto">
+    <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+      <div class="text-gray-500 text-sm">
+        © 2025 Feby Syarief. Built with Eleventy.
+      </div>
+      <div class="flex gap-4">
+        
+        <a href="https://github.com/lainx86" 
+           target="_blank" 
+           rel="noopener noreferrer"
+           class="text-gray-400 hover:text-purple-400 transition-colors"
+           aria-label="GitHub">
+          <i data-lucide="github" class="w-5 h-5"></i>
+        </a>
+        
+        <a href="https://linkedin.com/in/febysyarief" 
+           target="_blank" 
+           rel="noopener noreferrer"
+           class="text-gray-400 hover:text-purple-400 transition-colors"
+           aria-label="LinkedIn">
+          <i data-lucide="linkedin" class="w-5 h-5"></i>
+        </a>
+        
+        <a href="mailto:febysyarief.ocean@gmail.com" 
+           target="_blank" 
+           rel="noopener noreferrer"
+           class="text-gray-400 hover:text-purple-400 transition-colors"
+           aria-label="Email">
+          <i data-lucide="mail" class="w-5 h-5"></i>
+        </a>
+        
+        <a href="https://instagram.com/yourusername" 
+           target="_blank" 
+           rel="noopener noreferrer"
+           class="text-gray-400 hover:text-purple-400 transition-colors"
+           aria-label="Instagram">
+          <i data-lucide="instagram" class="w-5 h-5"></i>
+        </a>
+        
+      </div>
+    </div>
+  </div>
+</footer>
+  </div>
+
+  <!-- Scripts -->
+  <script src="/assets/js/navigation.js"></script>
+  <script src="/assets/js/main.js"></script>
+  <script src="/assets/js/scroll.js"></script>
+  <script src="/assets/js/mouse.js"></script>
+  <script>
+    // Initialize Lucide icons
+    lucide.createIcons();
+  </script>
+</body>
 </html>

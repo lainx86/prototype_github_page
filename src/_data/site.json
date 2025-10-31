@@ -1,0 +1,17 @@
+{
+  "title": "Feby - Portfolio",
+  "description": "I'm obsessed with building",
+  "url": "https://yourportfolio.com",
+  "author": {
+    "name": "Feby Syarief",
+    "title": "Student | Engineer | Builder",
+    "tagline": "I'm obsessed with building",
+    "email": "febysyarief.ocean@gmail.com",
+    "location": "Diponegoro University"
+  },
+  "meta": {
+    "lang": "en",
+    "locale": "en_US",
+    "themeColor": "#8b5cf6"
+  }
+}
