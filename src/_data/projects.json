@@ -22,5 +22,21 @@
     "link": "https://github.com/lainx86/mind-reader",
     "image": "/assets/images/projects/project3.jpg",
     "featured": true
+  },
+  {
+    "title": "cuda-image-enhancer",
+    "description": "Image Quality Enhancer with CUDA",
+    "tech": ["C++", "Cuda"],
+    "link": "https://github.com/lainx86/cuda-image-enhancer",
+    "image": "/assets/images/projects/project3.jpg",
+    "featured": true
+  },
+  {
+    "title": "hand_gesture",
+    "description": "Nampilin 4 gambar monyet berbeda berdasarkan gestur tangan yang terdeteksi lewat kamera",
+    "tech": ["python"],
+    "link": "https://github.com/lainx86/hand_gesture",
+    "image": "/assets/images/projects/project3.jpg",
+    "featured": true
   }
 ]
