@@ -26,7 +26,7 @@
   {
     "title": "cuda-image-enhancer",
     "description": "Image Quality Enhancer with CUDA",
-    "tech": ["C++", "Cuda"],
+    "tech": ["Cuda", "C++", "C"],
     "link": "https://github.com/lainx86/cuda-image-enhancer",
     "image": "/assets/images/projects/project3.jpg",
     "featured": true
