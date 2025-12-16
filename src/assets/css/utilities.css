@@ -9,10 +9,7 @@ a,
 a:hover,
 a:focus,
 a:active,
-a:visited {
-  text-decoration: none !important;
-}
-
+a:visited,
 button,
 .btn,
 .button {
@@ -38,12 +35,12 @@ button,
 
 /* Spacing after fixed nav */
 .nav-spacer {
-  height: 8rem;
+  height: 6rem;
 }
 
 @media (max-width: 768px) {
   .nav-spacer {
-    height: 6rem;
+    height: 5rem;
   }
 }
 
@@ -52,18 +49,16 @@ button,
   white-space: nowrap;
 }
 
-/* Additional glass morphism variants */
+/* Additional glass morphism variants - redefined */
 .glass-card {
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 1rem;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: 0.75rem;
 }
 
 .glass-dark {
-  background: rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(15px);
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  background: #000;
+  border: 1px solid var(--border-subtle);
 }
 
 /* Prevent content shift */
@@ -73,5 +68,5 @@ body {
 
 /* Smooth transitions */
 .smooth-transition {
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.2s ease;
 }
