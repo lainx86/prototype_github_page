@@ -11,16 +11,18 @@ nav {
 }
 
 .liquid-glass-nav {
-  background: rgba(17, 17, 19, 0.7);
-  /* linear-like dark surface */
+  background: rgba(20, 20, 22, 0.7);
+  /* Slightly lighter/glassier than surface */
   backdrop-filter: blur(20px) saturate(180%);
   -webkit-backdrop-filter: blur(20px) saturate(180%);
   border-radius: 50px;
-  border: 1px solid var(--border-subtle);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  /* Classic glass border */
   box-shadow:
     0 8px 32px 0 rgba(0, 0, 0, 0.5),
     inset 0 1px 0 0 rgba(255, 255, 255, 0.1),
     0 0 0 1px rgba(255, 255, 255, 0.05);
+  /* Classic glass inner shine */
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   overflow: hidden;
@@ -52,7 +54,7 @@ nav {
   box-shadow:
     0 8px 32px 0 var(--accent-soft),
     inset 0 1px 0 0 rgba(255, 255, 255, 0.15),
-    0 0 0 1px rgba(168, 85, 247, 0.15);
+    0 0 0 1px var(--accent-soft);
 }
 
 /* Navigation Links */
@@ -73,7 +75,8 @@ nav {
 }
 
 .nav-link:hover {
-  background: var(--bg-surface-hover);
+  background: rgba(255, 255, 255, 0.1);
+  /* Glass hover */
   color: var(--text-primary);
 }
 
@@ -147,4 +150,23 @@ nav {
 /* Stop animation on hover */
 nav:hover {
   animation: none;
+}
+
+/* Glow pulse effect (Restored definition) */
+@keyframes glow-pulse {
+
+  0%,
+  100% {
+    box-shadow:
+      0 8px 32px 0 rgba(0, 0, 0, 0.5),
+      inset 0 1px 0 0 rgba(255, 255, 255, 0.1),
+      0 0 0 1px rgba(255, 255, 255, 0.05);
+  }
+
+  50% {
+    box-shadow:
+      0 8px 32px 0 var(--accent-soft),
+      inset 0 1px 0 0 rgba(255, 255, 255, 0.15),
+      0 0 0 1px var(--accent-soft);
+  }
 }

@@ -1,72 +1,68 @@
-// Mouse Tracking and 3D Effects
+/* Minimalist Mouse Glow Effect - Linear Style */
 
 document.addEventListener('DOMContentLoaded', function() {
-  const animatedBg = document.getElementById('animated-bg');
-  const profile3d = document.querySelector('.profile-3d');
-  
+  // Create the glow element
+  const glow = document.createElement('div');
+  glow.className = 'mouse-glow';
+  document.body.appendChild(glow);
+
+  // Add styles dynamically
+  const style = document.createElement('style');
+  style.innerHTML = `
+    .mouse-glow {
+      pointer-events: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle at center, rgba(99, 102, 241, 0.08), transparent 70%);
+      transform: translate(-50%, -50%);
+      z-index: 9998; /* Behind nav (9999) but above content */
+      opacity: 0;
+      transition: opacity 0.5s ease;
+    }
+  `;
+  document.head.appendChild(style);
+
   let mouseX = 0;
   let mouseY = 0;
-  let currentX = 0;
-  let currentY = 0;
-  
-  // Track mouse position
-  document.addEventListener('mousemove', function(e) {
-    mouseX = (e.clientX / window.innerWidth - 0.5) * 20;
-    mouseY = (e.clientY / window.innerHeight - 0.5) * 20;
+  let cursorX = 0;
+  let cursorY = 0;
+
+  // Track mouse
+  document.addEventListener('mousemove', (e) => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+    
+    // Show glow on first movement
+    if (glow.style.opacity !== '1') {
+      glow.style.opacity = '1';
+    }
   });
-  
-  // Smooth animation loop
+
+  // Smooth follow animation
   function animate() {
-    currentX += (mouseX - currentX) * 0.1;
-    currentY += (mouseY - currentY) * 0.1;
-    
-    // Apply transform to animated background
-    if (animatedBg) {
-      const bgElement = animatedBg.querySelector('div');
-      if (bgElement) {
-        bgElement.style.transform = `translate(${currentX}px, ${currentY}px)`;
-      }
-    }
-    
-    // Apply 3D rotation to profile image
-    if (profile3d) {
-      profile3d.style.transform = `
-        perspective(1000px) 
-        rotateX(${-currentY * 0.5}deg) 
-        rotateY(${currentX * 0.5}deg)
-      `;
-    }
-    
+    // Smooth lerp
+    cursorX += (mouseX - cursorX) * 0.1;
+    cursorY += (mouseY - cursorY) * 0.1;
+
+    glow.style.left = `${cursorX}px`;
+    glow.style.top = `${cursorY}px`;
+
     requestAnimationFrame(animate);
   }
-  
+
   animate();
-  
-  // Parallax effect for cards
-  const cards = document.querySelectorAll('.project-card, .experience-card');
-  
-  cards.forEach(card => {
-    card.addEventListener('mousemove', function(e) {
-      const rect = card.getBoundingClientRect();
-      const x = e.clientX - rect.left;
-      const y = e.clientY - rect.top;
+
+  // Subtle Parallax for Profile (Significantly reduced)
+  const profile3d = document.querySelector('.profile-3d');
+  if (profile3d) {
+    document.addEventListener('mousemove', (e) => {
+      const x = (window.innerWidth / 2 - e.clientX) / 50;
+      const y = (window.innerHeight / 2 - e.clientY) / 50;
       
-      const centerX = rect.width / 2;
-      const centerY = rect.height / 2;
-      
-      const rotateX = (y - centerY) / 10;
-      const rotateY = (centerX - x) / 10;
-      
-      card.style.transform = `
-        perspective(1000px) 
-        rotateX(${rotateX}deg) 
-        rotateY(${rotateY}deg)
-        scale3d(1.02, 1.02, 1.02)
-      `;
+      profile3d.style.transform = `translate(${x}px, ${y}px)`;
     });
-    
-    card.addEventListener('mouseleave', function() {
-      card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) scale3d(1, 1, 1)';
-    });
-  });
+  }
 });
