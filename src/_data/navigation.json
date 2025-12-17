@@ -12,6 +12,10 @@
     "url": "/projects"
   },
   {
+    "label": "Labs",
+    "url": "/labs"
+  },
+  {
     "label": "Experience",
     "url": "/experience"
   },

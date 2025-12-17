@@ -1,0 +1,20 @@
+[
+    {
+        "title": "Canvas Experiments",
+        "description": "Playing with HTML5 Canvas animations and physics.",
+        "status": "experiment",
+        "date": "2023-10-01"
+    },
+    {
+        "title": "AI Chat Interface",
+        "description": "A minimal chat UI exploring new interaction patterns.",
+        "status": "prototype",
+        "date": "2023-11-15"
+    },
+    {
+        "title": "Procedural Music",
+        "description": "Generating ambient sounds using Web Audio API.",
+        "status": "ongoing",
+        "date": "2023-12-05"
+    }
+]

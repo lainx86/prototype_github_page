@@ -70,3 +70,12 @@ body {
 .smooth-transition {
   transition: all 0.2s ease;
 }
+
+/* List Utilities */
+.list-none {
+  list-style: none;
+}
+
+.pl-0 {
+  padding-left: 0;
+}

@@ -1,6 +1,6 @@
 /* Minimalist Mouse Glow Effect - Linear Style */
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   // Create the glow element
   const glow = document.createElement('div');
   glow.className = 'mouse-glow';
@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function() {
   document.addEventListener('mousemove', (e) => {
     mouseX = e.clientX;
     mouseY = e.clientY;
-    
+
     // Show glow on first movement
     if (glow.style.opacity !== '1') {
       glow.style.opacity = '1';
@@ -56,13 +56,5 @@ document.addEventListener('DOMContentLoaded', function() {
   animate();
 
   // Subtle Parallax for Profile (Significantly reduced)
-  const profile3d = document.querySelector('.profile-3d');
-  if (profile3d) {
-    document.addEventListener('mousemove', (e) => {
-      const x = (window.innerWidth / 2 - e.clientX) / 50;
-      const y = (window.innerHeight / 2 - e.clientY) / 50;
-      
-      profile3d.style.transform = `translate(${x}px, ${y}px)`;
-    });
-  }
+
 });

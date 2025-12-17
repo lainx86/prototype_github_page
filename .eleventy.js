@@ -1,12 +1,13 @@
 // .eleventy.js
-module.exports = function(eleventyConfig) {
+module.exports = function (eleventyConfig) {
   // Copy assets to output
   eleventyConfig.addPassthroughCopy("src/assets");
-  
+  eleventyConfig.addPassthroughCopy("src/CNAME");
+
   // Watch for changes in CSS and JS
   eleventyConfig.addWatchTarget("src/assets/css/");
   eleventyConfig.addWatchTarget("src/assets/js/");
-  
+
   // Enable hot reload
   eleventyConfig.setServerOptions({
     watch: ["_site/**/*.css", "_site/**/*.js"],
