@@ -1,42 +1,69 @@
 [
   {
-    "title": "cli-audio-player",
-    "description": "Pemutar audio minimalis via terminal, ditulis dengan C++.\nGak ada UI, gak ada warna, cuma suara.",
-    "tech": ["C++", "SFML"],
-    "link": "https://github.com/lainx86/cli-audio-player",
-    "image": "/assets/images/projects/project1.jpg",
-    "featured": true
-  },
-  {
-    "title": "tidesh",
-    "description": "a minimal Unix shell written in C",
-    "tech": ["C"],
-    "link": "https://github.com/lainx86/tidesh",
-    "image": "/assets/images/projects/project2.jpg",
-    "featured": true
-  },
-  {
-    "title": "mind-reader",
-    "description": "Project gak jelas wkwk",
-    "tech": ["C++"],
-    "link": "https://github.com/lainx86/mind-reader",
-    "image": "/assets/images/projects/project3.jpg",
+    "title": "InterpKit",
+    "description": "InterpKit is a CLI (Command Line Interface) tool designed to speed up and simplify data retrieval from engineering tables, particularly the d/L function table for d/L0 value increments.",
+    "tech": [
+      "Python",
+      "Excel"
+    ],
+    "link": "https://github.com/lainx86/InterpKit",
+    "image": "/assets/image/projects/interpkit.png",
     "featured": true
   },
   {
     "title": "cuda-image-enhancer",
     "description": "Image Quality Enhancer with CUDA",
-    "tech": ["Cuda", "C++", "C"],
+    "tech": [
+      "Cuda",
+      "C++",
+      "C"
+    ],
     "link": "https://github.com/lainx86/cuda-image-enhancer",
-    "image": "/assets/images/projects/project3.jpg",
+    "image": "",
     "featured": true
   },
   {
     "title": "hand_gesture",
     "description": "Nampilin 4 gambar monyet berbeda berdasarkan gestur tangan yang terdeteksi lewat kamera",
-    "tech": ["python"],
+    "tech": [
+      "python",
+      "OpenCV",
+      "MediaPipe",
+      "Scikit-learn"
+    ],
     "link": "https://github.com/lainx86/hand_gesture",
-    "image": "/assets/images/projects/project3.jpg",
+    "image": "",
+    "featured": true
+  },
+  {
+    "title": "tidesh",
+    "description": "a minimal Unix shell written in C",
+    "tech": [
+      "C"
+    ],
+    "link": "https://github.com/lainx86/tidesh",
+    "image": "",
+    "featured": true
+  },
+  {
+    "title": "cli-audio-player",
+    "description": "Pemutar audio minimalis via terminal, ditulis dengan C++.\nGak ada UI, gak ada warna, cuma suara.",
+    "tech": [
+      "C++",
+      "SFML"
+    ],
+    "link": "https://github.com/lainx86/cli-audio-player",
+    "image": "",
+    "featured": true
+  },
+  {
+    "title": "mind-reader",
+    "description": "Project gak jelas wkwk",
+    "tech": [
+      "C++"
+    ],
+    "link": "https://github.com/lainx86/mind-reader",
+    "image": "",
     "featured": true
   }
 ]

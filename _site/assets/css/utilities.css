@@ -79,3 +79,7 @@ body {
 .pl-0 {
   padding-left: 0;
 }
+
+.flex-wrap {
+  flex-wrap: wrap;
+}

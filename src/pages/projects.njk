@@ -9,7 +9,12 @@ permalink: /projects/
   <!-- All Projects -->
   <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
     {% for project in projects %}
-    <div class="project-card">
+    <div class="project-card group">
+      {% if project.image %}
+      <div class="mb-4 rounded-lg overflow-hidden h-48 bg-black/50 border border-white/5">
+        <img src="{{ project.image }}" alt="{{ project.title }}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+      </div>
+      {% endif %}
       <h3 class="text-2xl font-bold mb-3 text-purple-400">
         {{ project.title }}
       </h3>
