@@ -13,6 +13,19 @@ module.exports = function (eleventyConfig) {
     watch: ["_site/**/*.css", "_site/**/*.js"],
   });
 
+  // Date filters
+  eleventyConfig.addFilter("dateIso", (date) => {
+    return new Date(date).toISOString();
+  });
+
+  eleventyConfig.addFilter("dateReadable", (date) => {
+    return new Date(date).toLocaleDateString('en-US', {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric'
+    });
+  });
+
   return {
     dir: {
       input: "src",

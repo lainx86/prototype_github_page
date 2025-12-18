@@ -20,6 +20,10 @@
     "url": "/experience"
   },
   {
+    "label": "Journal",
+    "url": "/journal"
+  },
+  {
     "label": "Contact",
     "url": "/contact"
   }

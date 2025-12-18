@@ -1,0 +1,65 @@
+---
+layout: layouts/base.njk
+title: Journal
+permalink: /journal/
+eleventyExcludeFromCollections: true
+---
+{% include "partials/header.njk" %}
+
+<div class="min-h-screen pt-32 pb-16">
+  <div class="max-w-3xl mx-auto px-6">
+    <header class="mb-16">
+      <h1 class="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-blue-400 mb-6">
+        Journal
+      </h1>
+      <p class="text-xl text-gray-400 leading-relaxed font-light">
+        A space for reflective, technical, and personal writing.
+        Notes on building, learning, and exploring.
+      </p>
+    </header>
+
+    <div class="space-y-12">
+      {% for post in collections.journal | reverse %}
+      <article class="group relative pl-8 border-l border-white/10 hover:border-purple-500/50 transition-colors duration-300">
+        <!-- Dot indicator -->
+        <span class="absolute -left-[5px] top-2 w-[9px] h-[9px] rounded-full bg-black border border-white/20 group-hover:border-purple-500 group-hover:bg-purple-500/20 transition-all duration-300"></span>
+        
+        <div class="flex flex-col gap-2">
+          <time datetime="{{ post.date | dateIso }}" class="text-sm font-mono text-gray-500 group-hover:text-purple-400/80 transition-colors">
+            {{ post.date | dateReadable }}
+          </time>
+          
+          <h2 class="text-2xl font-semibold text-gray-200 group-hover:text-white transition-colors">
+            <a href="{{ post.url }}">
+              <span class="absolute inset-0"></span>
+              {{ post.data.title }}
+            </a>
+          </h2>
+          
+          {% if post.data.excerpt %}
+          <p class="text-gray-400 font-light leading-relaxed group-hover:text-gray-300 transition-colors">
+            {{ post.data.excerpt }}
+          </p>
+          {% endif %}
+          
+          {% if post.data.tags %}
+          <div class="flex gap-3 pt-2 relative z-10">
+            {% for tag in post.data.tags %}
+              {% if tag != "journal" %}
+              <span class="text-xs font-mono text-gray-600 group-hover:text-gray-500">#{{ tag }}</span>
+              {% endif %}
+            {% endfor %}
+          </div>
+          {% endif %}
+        </div>
+      </article>
+      {% endfor %}
+
+      {% if collections.journal.length == 0 %}
+      <div class="text-center py-20 text-gray-500">
+        <p>No entries yet. Writing something new...</p>
+      </div>
+      {% endif %}
+    </div>
+  </div>
+</div>
