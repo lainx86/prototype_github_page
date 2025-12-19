@@ -18,5 +18,10 @@
     "name": "Instagram",
     "icon": "instagram",
     "url": "https://instagram.com/yourusername"
+  },
+  {
+    "name": "YouTube",
+    "icon": "youtube",
+    "url": "https://www.youtube.com/@febyxy"
   }
 ]
