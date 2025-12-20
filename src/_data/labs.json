@@ -5,5 +5,12 @@
         "status": "Learning",
         "date": "2025-10-01",
         "link": "https://github.com/lainx86/metode_numerik_smt3"
+    },
+    {
+        "title": "tide",
+        "description": "A modern C++20 terminal emulator for Linux, built with OpenGL and GLFW.",
+        "status": "Under Development",
+        "date": "2025-12-20",
+        "link": "https://github.com/lainx86/tide"
     }
 ]
